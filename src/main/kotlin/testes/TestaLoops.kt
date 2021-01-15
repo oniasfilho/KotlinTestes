@@ -1,3 +1,5 @@
+package testes
+
 class TestaLoops {
 
     fun increase(numero:Int){
