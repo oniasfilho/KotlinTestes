@@ -1,14 +1,19 @@
 import model.Conta
+import model.Funcionario
+import model.Titular
 
 fun main() {
 
-//    val numeroX = 10
-//    var numeroY = numeroX
-//
-//    println("numeroX = $numeroX , numeroY = $numeroY")
 
-    val contaJoao = Conta(titular="John", saldo=20.0)
-    var contaMaria = Conta(titular="Mary", saldo=20.0);
+    var joaozinho = Titular(nome="Small John", cpf="02052554521")
+    var maria = Titular(cpf="25252525241", nome="Big Mary")
+    var severino = Funcionario(cpf = "123654853652", setor = "Security", salario = 2000.0, nome = "Severino")
+
+    val contaJoao = Conta(titular=joaozinho, saldo=20.0)
+    var contaMaria = Conta(titular=maria, saldo=20.0);
+
+
+    println("${severino.toString()} ${severino.nome} ")
 
     contaJoao.deposita(1000.0)
     contaMaria.deposita(1000.0)

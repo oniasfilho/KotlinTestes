@@ -1,8 +1,8 @@
 package model
 
-open class Conta(titular:String, saldo:Double) {
+open class Conta(titular:Titular, saldo:Double) {
 
-    var titular = titular
+    var titular:Titular = titular
     var numero = (Math.random() * 50).toInt();
     var saldo = saldo
 
@@ -20,7 +20,7 @@ open class Conta(titular:String, saldo:Double) {
     }
 
     override fun toString(): String {
-        return "Conta(titular='$titular', numero=$numero, saldo=$saldo)"
+        return "Conta(titular='${titular.nome}', numero=$numero, saldo=$saldo)"
     }
 
 
