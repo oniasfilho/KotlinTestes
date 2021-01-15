@@ -1,27 +1,55 @@
-import model.Titular
-import testes.TestaLoops
+import model.Conta
 
 fun main() {
 
-    var t1 = Titular()
+//    val numeroX = 10
+//    var numeroY = numeroX
+//
+//    println("numeroX = $numeroX , numeroY = $numeroY")
 
-    t1.nome = "Onias da Rocha Filho"
-    t1.saldo = 8000.0
+    val contaJoao = Conta(titular="John", saldo=20.0)
+    var contaMaria = Conta(titular="Mary", saldo=20.0);
 
-    println(t1.toString())
+    contaJoao.deposita(1000.0)
+    contaMaria.deposita(1000.0)
 
-    println("sacando 200 reais")
+    println(contaMaria.toString())
+    println(contaJoao.toString())
 
-    t1.saca(800.00)
+    contaJoao.transfere(28.0, contaMaria)
 
-    println(t1.toString())
+    println(contaMaria.toString())
+    println(contaJoao.toString())
 
-    println("depositando 9000")
-
-    println(t1.toString())
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 fun testaCondicoes(saldo: Double) {
     when {
@@ -30,6 +58,23 @@ fun testaCondicoes(saldo: Double) {
         saldo < 0 -> println("saldo negativo")
     }
 }
+
+
+//var c1 = Conta()
+//var c2 = Conta()
+//var c3 = ContaCorrente()
+//
+//
+//c1.titular = "Onias da Rocha Filho"
+//c1.saldo = 8000.0
+//
+//c2.titular = "Jaguru Dossa"
+//c2.saldo = 8000.0
+//
+//println(c1.toString())
+//println(c2.toString())
+//println(c3.teste)
+
 
 //
 //
